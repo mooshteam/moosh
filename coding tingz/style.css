@@ -2,6 +2,7 @@
 
 :root {
   --background-modal-color: #fff;
+  --body-color: #fff;
   --color-timeline-default: #D2D3D8;
   --color-step-completed: #5C6174;
   --color-checkmark-completed: #fff;
@@ -121,7 +122,6 @@ body {
   margin: 30px 15px 30px 0;
   transition: .5s ease;
 }
-
 .progress-bar {
   font-family: 'Muli', sans-serif;
   background: var(--body-color);
@@ -289,7 +289,6 @@ body {
     transform: rotate(360deg);
   }
 }
-
 
 /* What do you think about the box-shadow? */
 .social-media a:hover {
