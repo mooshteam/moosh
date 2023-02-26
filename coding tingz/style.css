@@ -7,7 +7,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-
 body {
   background: #FFE5B4;
   color: #111;
@@ -33,15 +32,22 @@ body {
   font-weight: 600;
   cursor: default;
   opacity: 0;
-  animation: slideRight 1s ease forwards;
+  /*changing the #s makes the animations slower for the moosh logo entrance*/
+  animation: slideRight 3s ease forwards;
 }
 /*This creates what the nav bar on the right looks like*/
 .navbar a {
+  display: inline-block;
   font-size: 18px;
   color: #111;
   text-decoration: none;
   font-weight: 500;
   margin-left: 35px;
+  transition: .45s;
+  opacity: 0;
+  /*changing the #s makes the animations slower for the main menu entrance*/
+  animation: slideTop 3s ease forwards;
+  animation-delay: calc(.2s * var(--i));
 }
 
 /*SHOULD WE ADD THIS OR CHANGE COLOR?*/
@@ -69,10 +75,16 @@ body {
 .home-content h3 {
   font-size: 32px;
   font-weight: 700;
+  opacity: 0;
+  animation: slideBottom 3s ease forwards;
+  animation-delay: 1s;
 }
 
 .home-content h3:nth-of-type(2){
   margin-bottom: 30px;
+  opacity: 0;
+  animation: slideTop 3s ease forwards;
+  animation-delay: 1s;
 }
 
 .home-content h3 span {
@@ -83,14 +95,23 @@ body {
   font-size: 56px;
   font-weight: 700;
   margin: -3px 0;
+  opacity: 0;
+  animation: slideRight 3s ease forwards;
+  animation-delay: 1s;
 }
 
 .home-content p{
   font-size: 16px;
+  opacity: 0;
+  animation: slideLeft 3s ease forwards;
+  animation-delay: 1s;
 }
 .home-img img{
   max-width: 550px;
   margin-right: -20px;
+  opacity: 0;
+  animation: zoomIn 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .social-media a{
@@ -107,6 +128,9 @@ body {
   text-decoration: none;
   margin: 30px 15px 30px 0;
   transition: .5s ease;
+  opacity: 0;
+  animation: slideLeft 3s ease forwards;
+  animation-delay: calc(.3s * var(--i));
 }
 
 /* What do you think about the box-shadow? */
@@ -126,5 +150,59 @@ body {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+@keyframes slideLeft{
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTop{
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideBottom{
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn{
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes flip {
+  0%,80% {
+    transform: rotateY(360deg) 
   }
 }
