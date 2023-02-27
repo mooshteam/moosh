@@ -23,6 +23,9 @@
 body {
   background: #FFE5B4;
   color: #111;
+  position: absolute; 
+  left: 0; 
+  right: 0
 }
 
 .header{
