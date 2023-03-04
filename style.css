@@ -67,7 +67,6 @@ body {
 .navbar a:hover,
 .navbar a.active {
   color:#ffff;
-
 }
 
 .home{
@@ -146,8 +145,14 @@ body {
   animation-delay: calc(.3s * var(--i));
 }
 
-.progress{
+.progress{ 
   background: #fff;
+  width: 100%; /*This and the next two lines is Ron's edit */
+  margin-left: auto;
+  margin-right: auto;
+/*This should set the white background to be the entire width of the screen and always centered
+the margins should probably be removed imo, but the tutorial i was looking at had them in.
+Check later for changes since i can't launch my live in mobile*/
 }
 
 .progress h3{
