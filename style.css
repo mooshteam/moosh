@@ -119,7 +119,7 @@ body {
   animation-delay: 1s;
 }
 .home-img img{
-  max-width: 550px;
+  max-width: 100%;  /* Ron: changed to 100% from 550px */
   margin-right: -20px;
   opacity: 0;
   animation: zoomIn 1s ease forwards;
