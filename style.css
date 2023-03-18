@@ -47,6 +47,7 @@ body {
   opacity: 0;
   /*changing the #s makes the animations slower for the moosh logo entrance*/
   animation: slideRight 3s ease forwards;
+  max-width: 100%;
 }
 /*This creates what the nav bar on the right looks like*/
 .navbar a {
