@@ -74,16 +74,14 @@ body {
   width: 100%;
   height: 100vh;
   display: flex;
-  justify-content: space-evenly;/*changed from space between*/
+  justify-content: space-between;
   align-items: center;
   padding: 70px 20% 0;
 
 }
 
 .home-content{
-  max-width: 100%; /*changed from 700px*/
-  margin-left: auto;
-  margin-right: auto;/*Ron added this and the line before*/
+  max-width: 700px; /*changed from 700px*/
 }
 
 .home-content h3 {
@@ -121,10 +119,8 @@ body {
   animation-delay: 1s;
 }
 .home-img img{
-  max-width: 100%;  /* Ron: changed to 100% from 550px */
-  /*margin-right: -20px;*/
-  margin-right: auto; /*Ron added this and the next line*/
-  margin-left: auto;
+  max-width: 550px; 
+  margin-right: -20px;
   opacity: 0;
   animation: zoomIn 1s ease forwards;
   animation-delay: 1s;
